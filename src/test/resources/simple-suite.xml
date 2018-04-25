@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SimpleSmokeTest">
+
+
+	<test name="SmokeTest">
+		<classes>
+			<class name="by.htp.testreport.test.LoginTest" />
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+	
+<!-- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/> -->
+</suite>
