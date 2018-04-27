@@ -13,7 +13,8 @@ public class MainPage extends BasePage {
 	@FindBy(id = "mailbox:login")
 	private WebElement loginField;
 
-	@FindBy(id = "mailbox:password")
+	//@FindBy(id = "mailbox:password")
+	@FindBy(id = "mailbox:psw")
 	private WebElement passField;
 
 	@FindBy(xpath = "/html/body/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/form/div[2]/div[2]/label/input")

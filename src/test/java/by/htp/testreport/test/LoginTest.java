@@ -3,8 +3,10 @@ package by.htp.testreport.test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,27 +14,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import by.htp.testreport.driver.DriverSingletone;
 import by.htp.testreport.pageobject.MainPage;
 
 public class LoginTest extends BaseTest {
 
-	
-	
-	private static Logger logger = LogManager.getLogger();
+	private static Logger logger = LogManager.getLogger(LoginTest.class);
 	// private static Logger logger = LogManager.getRootLogger();
 
-	@BeforeClass
-	public WebDriver startBrowser() {
-
-		//System.setProperty("webdriver.gecko.driver", "c:\\driver\\geckodriver.exe");
-		System.setProperty("webdriver.chrome.driver", "c:\\driver\\chromedriver\\chromedriver.exe");
-		driver = new ChromeDriver();
-		//driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
-		return driver;
-	}
-
+	
 	@Test
 	public void testLog4j2() {
 
@@ -46,7 +36,7 @@ public class LoginTest extends BaseTest {
 		logger.error("This is an error message");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void doLogin() {
 
 		MainPage mainPage = navigate(MainPage.URL);

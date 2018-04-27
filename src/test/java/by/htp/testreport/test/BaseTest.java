@@ -3,13 +3,22 @@ package by.htp.testreport.test;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.SkipException;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import by.htp.testreport.driver.DriverSingletone;
 import by.htp.testreport.pageobject.MainPage;
 
 public class BaseTest {
 	
 	protected WebDriver driver;
+	
+	@BeforeClass
+	public void startBrowser() {
+
+		driver = DriverSingletone.getWebDriverInstance();
+	}
+
 
 	@Test(enabled=false)
 	protected void skipTest() {

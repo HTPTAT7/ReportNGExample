@@ -2,7 +2,7 @@ package by.htp.testreport.util;
 
 import java.io.Serializable;
 
-import org.apache.logging.log4j.core.Filter;
+/*import org.apache.logging.log4j.core.Filter;
 import org.apache.logging.log4j.core.Layout;
 import org.apache.logging.log4j.core.LogEvent;
 import org.apache.logging.log4j.core.appender.AbstractAppender;
@@ -12,11 +12,11 @@ import org.apache.logging.log4j.core.config.plugins.PluginElement;
 import org.apache.logging.log4j.core.config.plugins.PluginFactory;
 import org.apache.logging.log4j.core.config.plugins.validation.constraints.Required;
 import org.apache.logging.log4j.core.layout.AbstractStringLayout;
-import org.testng.Reporter;
+import org.testng.Reporter;*/
 
-@Plugin(name = "Stub", category = "Core", elementType = "appender", printObject = true)
-public class TestNGReportAppender extends AbstractAppender {
-
+//@Plugin(name = "Stub", category = "Core", elementType = "appender", printObject = true)
+public class TestNGReportAppender /* AbstractAppender */{
+/*
 	private TestNGReportAppender(final String name, final Layout layout) {
 		super(name, null, layout, false);
 	}
@@ -37,5 +37,5 @@ public class TestNGReportAppender extends AbstractAppender {
 			Reporter.log(event.getMessage().getFormattedMessage());
 		}
 
-	}
+	}*/
 }
