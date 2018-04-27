@@ -16,6 +16,8 @@ import by.htp.testreport.pageobject.MainPage;
 
 public class LoginTest extends BaseTest {
 
+	
+	
 	private static Logger logger = LogManager.getLogger();
 	// private static Logger logger = LogManager.getRootLogger();
 
