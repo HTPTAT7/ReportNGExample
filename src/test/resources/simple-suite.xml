@@ -4,6 +4,8 @@
 <suite name="SimpleSmokeTest">
 
 
+
+
 	<test name="SmokeTest">
 		<classes>
 			<class name="by.htp.testreport.test.LoginTest" />
