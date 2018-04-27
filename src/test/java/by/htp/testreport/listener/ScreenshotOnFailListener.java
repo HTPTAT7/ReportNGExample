@@ -13,6 +13,7 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 import by.htp.testreport.driver.DriverSingletone;
 
@@ -51,6 +52,7 @@ public class ScreenshotOnFailListener implements ITestListener, ISuiteListener, 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		System.out.println(" g ");
+		takeScreenshot();
 	}
 
 	@Override
@@ -80,7 +82,10 @@ public class ScreenshotOnFailListener implements ITestListener, ISuiteListener, 
                 .getWebDriverInstance())
                 .getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(screenCapture, new File(".//target/screenshots/screenshot.png"));
+        	
+        	File f = new File(".//target/screenshots/screenshot.png" );
+            FileUtils.copyFile(screenCapture, f);
+            Reporter.log("<img src=" + f.getAbsolutePath()+ "/>");
         } catch (IOException e) {
             System.out.println("Failed to save screenshot: " + e.getLocalizedMessage());
         }
